@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Pontuar Truco</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="white">
+</head>
+<body class="fullscreen bg-dark">
+
+<nav class="navbar bg">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1 text-light">Truco Platiun - O pontuador feito para suas partidas</span>
+  </div>
+  <div>
+    <img src="images/truco.png">
+  </div>
+</nav>
+
+<p id="regras"> 
+  <a class="btn btn-light" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Leia as Instruções</a>
+  aaa
+  <button type="submit" class="btn btn-light" onclick="novoJogo()">Iniciar novo Jogo</button>
+</p>
+<div id="regrasT" class="row">
+  <div class="col-9">
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body">
+        Olá, bem-vindos ao contador de pontos dos seus jogos de truco! Primeiro clique na carta ao lado dos nomes "Time 01" e "Time 02" para adicionar o nome de seus times.
+        Conforme for marcando os pontos, clique nos botões que estão dentro de cada qudrinho do respectivo time. Quando atingir 12 pontos o jogo para e marca uma vitória para o time que ganhar.
+        Jogue o quanto quiser, e se quiser zerar o placar clique em "Novo Jogo".
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div id="placar" class="container text-center  col-3">
+      <div class="row text-center ">
+        <div  class="col-4 border border-3 rounded-start border-light text-light">
+          <P id="pontoT1">0</P>
+        </div>
+        <div id="x" class="col-1 border border-3 border-light text-light">
+          X
+        </div>
+        <div class="col-4 border border-3 rounded-end border-light text-light">
+          <P id="pontoT2">0</P>
+        </div>
+      </div>
+     </div>
+
+    <div class="container text-center col-9">
+        <div id="cards" class="row">
+          <div class="col-6 border border-5 rounded-start border-light">
+            <div>
+              <h2 id="titulo" class="text-light"><span id="tituloTime1">Time 01</span> <span onclick="nomeTime1()">🃏</span></h2>
+            </div>
+            <div id="verPontos" class="col-9 text-light">
+              <span>Total de Pontos:</span>
+              <h1 id="resultado1">0</h1>
+            </div>
+            <div id="botoes">
+              <button type="submit" id="bnt1" class="btn btn-outline-light" onclick="somaPonto()">+ 1</button>
+              <button type="submit" id="bnt2" class="btn btn-outline-light" onclick="somaPonto()">+ 3</button>
+              <button type="submit" class="btn btn-outline-light" onclick="somaPonto()">+ 6</button>
+              <button type="submit" class="btn btn-outline-light" onclick="somaPonto()">+ 12</button>
+            </div>
+          </div>
+    
+          <div id="placar2" class="col-6 border border-5 rounded-end border-light">
+            <div>
+              <h2 id="titulo" class="text-light"><span id="tituloTime2">Time 02</span> <span onclick="nomeTime2()">🃏</span></h2>
+            </div class="col-6">
+            <div id="verPontos" class="col-9 text-light">
+              <span>Total de Pontos:</span>
+            </div>
+            <div id="botoes">
+              <button type="submit" class="btn btn-outline-light">+ 1</button>
+              <button type="submit" class="btn btn-outline-light">+ 3</button>
+              <button type="submit" class="btn btn-outline-light">+ 6</button>
+              <button type="submit" class="btn btn-outline-light">+ 12</button>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
