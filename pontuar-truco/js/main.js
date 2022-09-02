@@ -5,9 +5,10 @@ window.onload = () => {
   }
 };
 
+
+//Trocar nome dos times 01 e 02
 let modelo = {
-  titulo: "",
-  pontos: 0,
+  titulo: ""
 }
 
 function adicionarT1(){
@@ -30,15 +31,75 @@ function nomeTime2() {
   adicionarT2();
 }
 
-//novoJogo = () => {
-  //const tituloTime1 = document.getElementById('tituloTime1');
-  //const tituloTime2 = document.getElementById('tituloTime2');
-  //const pontoT1 = document.getElementById('pontoT1');
-  //const pontoT2 = document.getElementById('pontoT2');
-  //const resultado = document.getElementById('resultado');
-  //tituloTime1.value = "Time 01";
-  //tituloTime2.value = "Time 02";
-  //pontoT1.value = "0";
-  //pontoT2.value = "0";
-  //resultado.value = "0";
-//}
+//Botões para adicionar a vitória dos times
+function adicionaVitoria(){
+  let pontos = document.getElementById("pontoT1");
+  let somar = parseInt(pontos.textContent) + 1;
+  pontos.textContent = somar
+}
+
+function adicionaVitoria2(){
+  let pontos = document.getElementById("pontoT2");
+  let somar = parseInt(pontos.textContent) + 1;
+  pontos.textContent = somar
+}
+
+//Botões para somar a quantidade de pontos adquirdos por time
+function somaPonto(){
+  let pontos = document.getElementById("resultado1");
+  let somar = parseInt(pontos.textContent) + 1;
+  pontos.textContent = somar 
+} 
+
+function somaPonto3(){
+  let pontos = document.getElementById("resultado1");
+  let somar = parseInt(pontos.textContent) + 3;
+  pontos.textContent = somar 
+}
+function somaPonto6(){
+  let pontos = document.getElementById("resultado1");
+  let somar = parseInt(pontos.textContent) + 6;
+  pontos.textContent = somar 
+}
+function somaPonto12(){
+  document.getElementById("resultado1").innerHTML = 12
+}
+
+function somaPonto_1(){
+  let pontos = document.getElementById("resultado2");
+  let somar = parseInt(pontos.textContent) + 1;
+  pontos.textContent = somar 
+} 
+
+function somaPonto_3(){
+  let pontos = document.getElementById("resultado2");
+  let somar = parseInt(pontos.textContent) + 3;
+  pontos.textContent = somar
+}
+
+function somaPonto_6(){
+  let pontos = document.getElementById("resultado2");
+  let somar = parseInt(pontos.textContent) + 6;
+  pontos.textContent = somar
+}
+
+function somaPonto_12(){
+  document.getElementById("resultado2").innerHTML = 12
+}
+
+//Botão para criar/iniciar um  novo jogo
+function novoJogo() {
+  document.getElementById("resultado1").innerHTML = 0
+  document.getElementById("resultado2").innerHTML = 0
+  document.getElementById("tituloTime1").innerHTML = ("Time 01")
+  document.getElementById("tituloTime2").innerHTML = ("Time 02")
+  document.getElementById("pontoT1").innerHTML = 0
+  document.getElementById("pontoT2").innerHTML = 0 
+
+}
+
+//Botão para limpar a pontuação dos times
+function limparPontuacao() {
+  document.getElementById("resultado1").innerHTML = 0
+  document.getElementById("resultado2").innerHTML = 0
+}

@@ -23,16 +23,16 @@
 </nav>
 
 <p id="regras"> 
-  <a class="btn btn-light" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Leia as Instruções</a>
-  aaa
-  <button type="submit" class="btn btn-light" onclick="novoJogo()">Iniciar novo Jogo</button>
+  <a id="bntInicio" class="btn btn-light" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Leia as Instruções</a>
+  <button id="bntInicio" type="submit" class="btn btn-light" onclick="novoJogo()">Iniciar novo Jogo</button>
 </p>
 <div id="regrasT" class="row">
   <div class="col-9">
     <div class="collapse multi-collapse" id="multiCollapseExample1">
       <div class="card card-body">
         Olá, bem-vindos ao contador de pontos dos seus jogos de truco! Primeiro clique na carta ao lado dos nomes "Time 01" e "Time 02" para adicionar o nome de seus times.
-        Conforme for marcando os pontos, clique nos botões que estão dentro de cada qudrinho do respectivo time. Quando atingir 12 pontos o jogo para e marca uma vitória para o time que ganhar.
+        Conforme for marcando os pontos, clique nos botões que estão dentro de cada qudrinho do respectivo time para somá-los. Quando atingir 12 pontos clique no botão "+1" do respectivo time, que fica abaixo do placar, ele irá marcar mais uma vitória para o time que estiver ganhando.
+        Quando marcar uma vitória, para apagar o local de soma de pontos, basta clicar no botão "Limpar pontuação".
         Jogue o quanto quiser, e se quiser zerar o placar clique em "Novo Jogo".
       </div>
     </div>
@@ -50,6 +50,8 @@
         <div class="col-4 border border-3 rounded-end border-light text-light">
           <P id="pontoT2">0</P>
         </div>
+        <button id="bntPonto" type="submit" class="btn btn-outline-light col-4" onclick="adicionaVitoria()">+ 1</button>
+        <button id="bntPonto" type="submit" class="btn btn-outline-light col-4" onclick="adicionaVitoria2()">+ 1</button>
       </div>
      </div>
 
@@ -64,10 +66,10 @@
               <h1 id="resultado1">0</h1>
             </div>
             <div id="botoes">
-              <button type="submit" id="bnt1" class="btn btn-outline-light" onclick="somaPonto()">+ 1</button>
-              <button type="submit" id="bnt2" class="btn btn-outline-light" onclick="somaPonto()">+ 3</button>
-              <button type="submit" class="btn btn-outline-light" onclick="somaPonto()">+ 6</button>
-              <button type="submit" class="btn btn-outline-light" onclick="somaPonto()">+ 12</button>
+              <button type="submit" class="btn btn-outline-light" onclick="somaPonto()">+ 1</button>
+              <button type="submit" class="btn btn-outline-light" onclick="somaPonto3()">+ 3</button>
+              <button type="submit" class="btn btn-outline-light" onclick="somaPonto6()">+ 6</button>
+              <button type="submit" class="btn btn-outline-light" onclick="somaPonto12()">+ 12</button>
             </div>
           </div>
     
@@ -77,16 +79,17 @@
             </div class="col-6">
             <div id="verPontos" class="col-9 text-light">
               <span>Total de Pontos:</span>
+              <h1 id="resultado2">0</h1>
             </div>
             <div id="botoes">
-              <button type="submit" class="btn btn-outline-light">+ 1</button>
-              <button type="submit" class="btn btn-outline-light">+ 3</button>
-              <button type="submit" class="btn btn-outline-light">+ 6</button>
-              <button type="submit" class="btn btn-outline-light">+ 12</button>
+              <button type="submit" class="btn btn-outline-light" onclick="somaPonto_1()">+ 1</button>
+              <button type="submit" class="btn btn-outline-light" onclick="somaPonto_3()">+ 3</button>
+              <button type="submit" class="btn btn-outline-light" onclick="somaPonto_6()">+ 6</button>
+              <button type="submit" class="btn btn-outline-light" onclick="somaPonto_12()">+ 12</button>
             </div>
           </div>
-    
         </div>
+        <button id="limparcampo" type="submit" class="btn btn-outline-light col-6" onclick="limparPontuacao()">Limpar pontuação</button>
       </div>
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
